@@ -2,11 +2,6 @@ package util;
 
 public class Utility {
 
-    /**
-     * 引数に指定した文字列がnull、または空文字かを判定します。
-     * @param str
-     * @return
-     */
     public static boolean isNullOrEmpty(String str) {
         if(str == null || str.isEmpty()) {
             return true;
@@ -20,5 +15,17 @@ public class Utility {
      * @return
      */
     // todo:ここにgetStoneDisplayHtmlメソッドを定義
+    public static String getStoneDisplayHtml(int n) {
+    	String stone = "";
+    	for (int i = 0; i < n; i++) {
+    		int count = 1;
+    		stone += "●";
+    		if (count % 10 == 0) {
+    			stone = "<br>";
+    		}
+    		count++;
+    	}
+    	return stone;
+    }
 
 }
